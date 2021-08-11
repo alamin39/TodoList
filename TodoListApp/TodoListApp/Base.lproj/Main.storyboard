@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14868" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="WCr-13-FCW">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14824"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Categories-->
+        <scene sceneID="Jt6-Li-Qux">
+            <objects>
+                <viewController id="bPK-pc-S7J" customClass="CategoryViewController" customModule="TodoListApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="fZa-u3-DMO">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="B73-7g-6Bt">
+                                <rect key="frame" x="0.0" y="88" width="414" height="774"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="categories" id="CKK-9F-dBk" customClass="categoryCell" customModule="TodoListApp" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="414" height="43.5"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="CKK-9F-dBk" id="Pt7-vu-o5E">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <color key="backgroundColor" systemColor="systemGrayColor" red="0.55686274509803924" green="0.55686274509803924" blue="0.57647058823529407" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="B73-7g-6Bt" firstAttribute="trailing" secondItem="1CF-cC-VOR" secondAttribute="trailing" id="6d3-Th-9RT"/>
+                            <constraint firstItem="B73-7g-6Bt" firstAttribute="bottom" secondItem="1CF-cC-VOR" secondAttribute="bottom" id="ILg-Fx-0Kj"/>
+                            <constraint firstItem="B73-7g-6Bt" firstAttribute="leading" secondItem="1CF-cC-VOR" secondAttribute="leading" id="Wp1-iy-VyH"/>
+                            <constraint firstItem="B73-7g-6Bt" firstAttribute="top" secondItem="1CF-cC-VOR" secondAttribute="top" id="vwq-ug-cg6"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="1CF-cC-VOR"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Categories" id="mrp-NO-nzz"/>
+                    <connections>
+                        <outlet property="categoryTable" destination="B73-7g-6Bt" id="vzA-SH-fUE"/>
+                        <segue destination="SCD-vL-AYl" kind="show" identifier="items" id="JhM-Oi-pBL"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="GQh-nt-cOZ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="842.02898550724649" y="37.5"/>
+        </scene>
+        <!--Items-->
+        <scene sceneID="0OY-1K-Jd8">
+            <objects>
+                <viewController id="SCD-vL-AYl" customClass="ItemViewController" customModule="TodoListApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="YK1-bo-Z7J">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="qgM-cW-QVq">
+                                <rect key="frame" x="0.0" y="88" width="414" height="774"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="items" id="LjY-3I-T5Y" customClass="itemCell" customModule="TodoListApp" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="414" height="43.5"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="LjY-3I-T5Y" id="Xc5-Zp-ScO">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="qgM-cW-QVq" firstAttribute="leading" secondItem="uAz-Bs-KdV" secondAttribute="leading" id="5PN-ng-DX1"/>
+                            <constraint firstItem="qgM-cW-QVq" firstAttribute="top" secondItem="uAz-Bs-KdV" secondAttribute="top" id="7lJ-Kr-BzZ"/>
+                            <constraint firstItem="uAz-Bs-KdV" firstAttribute="bottom" secondItem="qgM-cW-QVq" secondAttribute="bottom" id="NAb-ho-7dc"/>
+                            <constraint firstItem="uAz-Bs-KdV" firstAttribute="trailing" secondItem="qgM-cW-QVq" secondAttribute="trailing" id="mY4-hx-JNl"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="uAz-Bs-KdV"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Items" id="hgQ-X8-V3B"/>
+                    <connections>
+                        <outlet property="itemTable" destination="qgM-cW-QVq" id="0j7-hR-wGr"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="hEO-6U-zSp" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1558" y="38"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="Tzg-pd-XPn">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="WCr-13-FCW" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="Fp9-ZJ-7Fb">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="bPK-pc-S7J" kind="relationship" relationship="rootViewController" id="sTs-dC-0n0"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Mzr-8G-GEa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="52" y="38"/>
+        </scene>
+    </scenes>
+</document>
